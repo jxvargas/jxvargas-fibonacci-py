@@ -1,13 +1,16 @@
 from setuptools import find_packages, setup
 
+# Defining a README file
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
 	name="jxvargas_fib_py",
 	version="0.0.1",
 	author="Jorge Vargas",
 	author_email="jxvargasc@gmail.com",
 	description="Calculates a Fibonacci number",
-	long_description="A basic library that \
-	calculates Fibonacci numbers",
+	long_description=long_description,
 	long_description_content_type="text/markdown",
 	url="https://github.com/jxvargas/jxvargas-fibonacci-py",
 	install_requires=[],
@@ -20,5 +23,3 @@ setup(
 	python_requires='>=3',
 	tests_require=['pytest'],
 )
-
-
